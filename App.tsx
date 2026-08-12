@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PortfolioPage from './pages/PortfolioPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import PackagesPage from './pages/PackagesPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
 <Route path="/services" element={<Navigate to="/solutions" replace />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
             <Route path="/case-studies" element={<PortfolioPage />} />
+            <Route path="/packages" element={<PackagesPage />} />
 <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
