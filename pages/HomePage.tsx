@@ -142,6 +142,14 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+            <div className="globe-orbit" aria-hidden="true">
+              <div className="globe-core"></div>
+              <span className="globe-ring globe-ring-one"></span>
+              <span className="globe-ring globe-ring-two"></span>
+              <span className="globe-node globe-node-one"></span>
+              <span className="globe-node globe-node-two"></span>
+              <span className="globe-node globe-node-three"></span>
+            </div>
           </div>
         </div>
       </section>
