@@ -26,12 +26,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="accent-gradient w-12 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm tracking-tighter shadow-lg shadow-blue-500/20 transform group-hover:scale-110 transition-transform">
-              NP
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-[#f7f5f0] font-serif font-black text-2xl italic bg-[#102a43] border border-[#c9a55c]/80 shadow-lg shadow-slate-900/20 transform group-hover:scale-110 group-hover:rotate-[-4deg] transition-transform">
+              N
             </div>
             <div className="flex flex-col leading-tight">
   <span className="text-xl font-bold tracking-tight text-slate-900">
-    NexaPlex <span className="text-blue-600">Web Hub</span>
+    NexaPlex <span className="text-[#b88b35]">Web Hub</span>
   </span>
 
   <span className="hidden lg:block mt-1 text-[8px] font-bold uppercase tracking-[0.16em] text-slate-600 whitespace-nowrap">
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
   href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
   target="_blank"
   rel="noopener noreferrer"
-  className="accent-gradient text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg shadow-blue-100 hover:shadow-blue-200 hover:scale-105 active:scale-95 transform-gpu hover:brightness-110"
+  className="bg-[#102a43] text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 shadow-lg shadow-slate-400/20 hover:bg-[#173f66] hover:shadow-xl hover:scale-105 active:scale-95 transform-gpu"
 >
   Book Free Discovery Call
 </a>
