@@ -27,8 +27,8 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-[#f7f5f0] font-serif font-black text-2xl italic bg-[#102a43] border border-[#c9a55c]/80 shadow-lg shadow-slate-900/20 transform group-hover:scale-110 group-hover:rotate-[-4deg] transition-transform">
-              N
+            <div className="h-12 flex items-center rounded-full border border-[#c9a55c]/70 bg-[#102a43] px-4 shadow-lg shadow-slate-900/15 transition-transform group-hover:scale-[1.03]">
+              <span className="font-serif text-lg font-bold tracking-[0.16em] text-[#f7f5f0]">NP</span>
             </div>
             <div className="flex flex-col leading-tight">
   <span className="text-xl font-bold tracking-tight text-slate-900">
