@@ -116,22 +116,32 @@
         .animate-bounce-slow {
           animation: bounce-slow 4s infinite;
         }
-        .hero-headline { transform-style: preserve-3d; }
-        .hero-word {
-          display: inline-block;
-          text-shadow: 0 10px 0 rgba(3, 12, 23, 0.4), 0 20px 28px rgba(0, 0, 0, 0.36);
-          animation: headline-depth 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-          transform-style: preserve-3d;
+        .text-gradient {
+          background: linear-gradient(135deg, #56b3ff 0%, #e8cf98 55%, #86d2ff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
-        .hero-word-accent {
-          color: #e8cf98;
-          animation-delay: 220ms;
-          text-shadow: 0 9px 0 #7f5d20, 0 18px 30px rgba(0, 0, 0, 0.42);
+        .globe-orbit {
+          position: absolute;
+          right: 6%;
+          bottom: 5%;
+          width: 250px;
+          height: 250px;
+          pointer-events: none;
+          opacity: 0.9;
+          animation: globe-float 7s ease-in-out infinite;
         }
-        @keyframes headline-depth {
-          0%, 100% { transform: translateZ(0) rotateX(0deg) rotateY(0deg); }
-          50% { transform: translateZ(38px) rotateX(7deg) rotateY(-4deg); }
+        .globe-core {
+          position: absolute; inset: 22px; border-radius: 9999px;
+          background: radial-gradient(circle at 34% 28%, #57b2f5 0%, #164a75 32%, #071521 72%);
+          border: 1px solid rgba(201,165,92,.8);
+          box-shadow: inset -28px -20px 55px rgba(0,0,0,.48), 0 0 55px rgba(40,126,205,.45);
         }
+        .globe-ring { position: absolute; inset: 6px; border: 1px solid rgba(201,165,92,.85); border-radius: 50%; transform: rotateX(65deg) rotateZ(18deg); }
+        .globe-ring-two { transform: rotateY(66deg) rotateZ(-20deg); border-color: rgba(93,184,255,.8); }
+        .globe-node { position: absolute; width: 12px; height: 12px; border-radius: 9999px; background: #e8cf98; box-shadow: 0 0 18px #e8cf98; }
+        .globe-node-one { left: 22px; top: 92px; } .globe-node-two { right: 20px; top: 72px; } .globe-node-three { left: 118px; bottom: 8px; }
+        @keyframes globe-float { 0%,100% { transform: translateY(0) rotateY(0deg); } 50% { transform: translateY(-18px) rotateY(14deg); } }
         .hero-visual {
           animation: hero-orbit 5.5s ease-in-out infinite;
           transform-style: preserve-3d;
