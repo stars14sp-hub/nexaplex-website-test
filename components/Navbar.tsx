@@ -23,19 +23,19 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-5">
+      <div className={`mx-auto max-w-6xl rounded-full border px-4 sm:px-5 transition-all duration-500 ${isScrolled ? 'border-slate-200 bg-white/90 py-2 shadow-xl shadow-slate-900/10 backdrop-blur-xl' : 'border-white/20 bg-[#071521]/65 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl'}`}>
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="h-12 flex items-center rounded-full border border-[#c9a55c]/70 bg-[#102a43] px-4 shadow-lg shadow-slate-900/15 transition-transform group-hover:scale-[1.03]">
               <span className="font-serif text-lg font-bold tracking-[0.16em] text-[#f7f5f0]">NP</span>
             </div>
             <div className="flex flex-col leading-tight">
-  <span className="text-xl font-bold tracking-tight text-slate-900">
+  <span className="text-xl font-bold tracking-tight ${isScrolled ? 'text-[#102a43]' : 'text-white'}">
     NexaPlex <span className="text-[#b88b35]">Web Hub</span>
   </span>
 
-  <span className="hidden lg:block mt-1 text-[8px] font-bold uppercase tracking-[0.16em] text-slate-600 whitespace-nowrap">
+  <span className="hidden lg:block mt-1 text-[8px] font-bold uppercase tracking-[0.16em] ${isScrolled ? 'text-slate-600' : 'text-slate-300'} whitespace-nowrap">
     Microsoft 365 Solutions That Drive Results
   </span>
 </div>
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${location.pathname === link.path ? 'text-blue-600' : 'text-slate-600'}`}
+                className={`text-sm font-medium transition-colors hover:text-[#c9a55c] ${location.pathname === link.path ? 'text-[#c9a55c]' : isScrolled ? 'text-slate-600' : 'text-slate-200'}`}
               >
                 {link.name}
               </Link>
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-slate-900 p-2"
+            className={`md:hidden p-2 ${isScrolled ? 'text-[#102a43]' : 'text-white'}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,10 +73,11 @@ const Navbar: React.FC = () => {
           </button>
         </div>
       </div>
+      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t mt-3 animate-in fade-in slide-in-from-top-4">
+        <div className="mx-auto mt-3 max-w-6xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl md:hidden animate-in fade-in slide-in-from-top-4">
           <div className="px-4 pt-2 pb-6 space-y-4">
             {navLinks.map((link) => (
               <Link
