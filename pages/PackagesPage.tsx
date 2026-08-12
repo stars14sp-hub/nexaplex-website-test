@@ -40,7 +40,7 @@ const PackagesPage: React.FC = () => (
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch">
         {packages.map((pkg) => (
-          <article key={pkg.name} className={`relative flex flex-col rounded-[2rem] p-8 sm:p-10 border transition-transform duration-500 hover:-translate-y-2 ${pkg.featured ? 'bg-[#102a43] text-white border-[#c9a55c] shadow-[0_32px_70px_-24px_rgba(16,42,67,0.65)] lg:-translate-y-4' : 'bg-white/85 text-[#102a43] border-[#c9a55c]/35 shadow-xl shadow-slate-200/50'}`}>
+          <article key={pkg.name} className={`package-card relative flex flex-col rounded-[2rem] p-8 sm:p-10 border ${pkg.featured ? 'bg-[#102a43] text-white border-[#c9a55c] shadow-[0_32px_70px_-24px_rgba(16,42,67,0.65)] lg:-translate-y-4' : 'bg-white/85 text-[#102a43] border-[#c9a55c]/35 shadow-xl shadow-slate-200/50'}`}>
             {pkg.featured && <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#c9a55c] text-[#102a43] px-5 py-2 text-[11px] font-black uppercase tracking-[0.18em] whitespace-nowrap">Recommended starting point</div>}
             <p className={`text-xs uppercase tracking-[0.2em] font-black mb-5 ${pkg.featured ? 'text-[#e8cf98]' : 'text-[#b88b35]'}`}>{pkg.eyebrow}</p>
             <h2 className="text-3xl font-bold mb-3">{pkg.name}</h2>
