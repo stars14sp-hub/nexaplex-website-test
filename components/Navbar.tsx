@@ -27,9 +27,7 @@ const Navbar: React.FC = () => {
       <div className={`mx-auto max-w-6xl rounded-full border px-4 sm:px-5 transition-all duration-500 ${isScrolled ? 'border-slate-200 bg-white/90 py-2 shadow-xl shadow-slate-900/10 backdrop-blur-xl' : 'border-[#c9a55c]/45 bg-white/95 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl'}`}>
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="h-12 flex items-center rounded-full border border-[#c9a55c]/70 bg-[#102a43] px-4 shadow-lg shadow-slate-900/15 transition-transform group-hover:scale-[1.03]">
-              <span className="font-serif text-lg font-bold tracking-[0.16em] text-[#f7f5f0]">NP</span>
-            </div>
+            <div className="h-10 w-px bg-[#c9a55c]/80"></div>
             <div className="flex flex-col leading-tight">
   <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-[#102a43]' : 'text-[#102a43]'}`}>
     NexaPlex <span className="text-[#b88b35]">Web Hub</span>
