@@ -1,4 +1,5 @@
 name: Deploy test preview
+# Preview deployment enabled
 
 on:
   push:
