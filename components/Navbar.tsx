@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#c9a55c]/25 bg-[#071521]/98 py-4 shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-300">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#e0b96b]/35 bg-[#281747]/98 py-4 shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="group flex flex-col leading-tight">
           <span className={`text-xl font-bold tracking-tight 'text-white'`}>
@@ -34,11 +34,11 @@ const Navbar: React.FC = () => {
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.path} to={link.path} className={`text-sm font-medium transition-colors hover:text-[#b88b35] ${location.pathname === link.path ? 'text-[#c9a55c]' : 'text-slate-100'}`}>
+            <Link key={link.path} to={link.path} className={`text-sm font-medium transition-colors hover:text-[#b88b35] ${location.pathname === link.path ? 'text-[#f5d58f]' : 'text-violet-50'}`}>
               {link.name}
             </Link>
           ))}
-          <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#c9a55c] px-5 py-2.5 text-sm font-bold text-[#071521] transition-all hover:bg-[#e0c17d] hover:scale-105">
+          <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#f5d58f] px-5 py-2.5 text-sm font-bold text-[#281747] transition-all hover:bg-[#ffe3a4] hover:scale-105">
             Book Free Discovery Call
           </a>
         </div>
