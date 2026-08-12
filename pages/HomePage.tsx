@@ -60,7 +60,16 @@ const HomePage: React.FC = () => {
       <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#071521]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl lg:max-w-xl">
+          <div className="max-w-3xl lg:max-w-xl relative">
+            <div className="globe-orbit globe-behind-copy" aria-hidden="true">
+              <div className="globe-core"></div>
+              <span className="globe-ring globe-ring-one"></span>
+              <span className="globe-ring globe-ring-two"></span>
+              <span className="globe-node globe-node-one"></span>
+              <span className="globe-node globe-node-two"></span>
+              <span className="globe-node globe-node-three"></span>
+            </div>
+            <div className="relative z-10">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
               Scale Faster. <span className="text-gradient whitespace-nowrap">Senior-Led.</span>
             </h1>
@@ -106,6 +115,7 @@ const HomePage: React.FC = () => {
     </span>
   ))}
 </div>
+            </div>
 
           </div>
         </div>
