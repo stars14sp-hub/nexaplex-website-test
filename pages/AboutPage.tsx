@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight">
             17+ Years of <br />
-            <span className="text-gradient">Architectural Rigor.</span>
+            <span className="bg-gradient-to-r from-purple-600 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent">Architectural Rigor.</span>
           </h1>
          <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium">
   NexaPlex Web Hub is a senior-led Microsoft 365 consulting practice and a Member of the <strong>Microsoft AI Cloud Partner Program</strong>. Unlike agencies that hand off mission-critical work to junior staff, every engagement is led directly by an experienced consultant with a <strong>Master of Science in Computer Science</strong> and 17+ years of enterprise experience designing secure, scalable <strong>SharePoint and Microsoft 365 solutions</strong>.
