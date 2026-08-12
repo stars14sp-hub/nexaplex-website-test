@@ -21,20 +21,20 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${isScrolled ? 'border-slate-200 bg-white/95 py-3 shadow-sm backdrop-blur-md' : 'border-white/15 bg-[#071521]/92 py-5'}`}>
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#c9a55c]/25 bg-[#071521]/98 py-4 shadow-lg shadow-black/20 backdrop-blur-md transition-all duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="group flex flex-col leading-tight">
-          <span className={`text-xl font-bold tracking-tight ${isScrolled ? 'text-[#102a43]' : 'text-white'}`}>
+          <span className={`text-xl font-bold tracking-tight 'text-white'`}>
             NexaPlex <span className="text-[#b88b35]">Web Hub</span>
           </span>
-          <span className={`hidden pt-1 text-[8px] font-bold uppercase tracking-[0.16em] lg:block ${isScrolled ? 'text-slate-600' : 'text-slate-300'}`}>
+          <span className={`hidden pt-1 text-[8px] font-bold uppercase tracking-[0.16em] lg:block 'text-slate-300'`}>
             Microsoft 365 Solutions That Drive Results
           </span>
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.path} to={link.path} className={`text-sm font-medium transition-colors hover:text-[#b88b35] ${location.pathname === link.path ? 'text-[#b88b35]' : isScrolled ? 'text-slate-600' : 'text-slate-100'}`}>
+            <Link key={link.path} to={link.path} className={`text-sm font-medium transition-colors hover:text-[#b88b35] ${location.pathname === link.path ? 'text-[#c9a55c]' : 'text-slate-100'}`}>
               {link.name}
             </Link>
           ))}
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        <button className={`p-2 md:hidden ${isScrolled ? 'text-[#102a43]' : 'text-white'}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle navigation">
+        <button className={`p-2 md:hidden 'text-white'`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle navigation">
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} /></svg>
         </button>
       </div>
