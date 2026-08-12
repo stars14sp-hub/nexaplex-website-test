@@ -123,14 +123,18 @@
         }
         .globe-orbit {
           position: absolute;
-          right: 7%;
-          top: 50%;
           width: min(31vw, 410px);
           height: min(31vw, 410px);
-          transform: translateY(-50%);
           pointer-events: none;
           opacity: 0.9;
           animation: globe-float 7s ease-in-out infinite;
+        }
+        .globe-behind-copy {
+          left: 46%;
+          top: 50%;
+          z-index: 0;
+          opacity: 0.32;
+          transform: translate(-50%, -50%) scale(1.35);
         }
         .globe-core {
           position: absolute; inset: 22px; border-radius: 9999px;
@@ -142,7 +146,7 @@
         .globe-ring-two { transform: rotateY(66deg) rotateZ(-20deg); border-color: rgba(93,184,255,.8); }
         .globe-node { position: absolute; width: 12px; height: 12px; border-radius: 9999px; background: #e8cf98; box-shadow: 0 0 18px #e8cf98; }
         .globe-node-one { left: 22px; top: 92px; } .globe-node-two { right: 20px; top: 72px; } .globe-node-three { left: 118px; bottom: 8px; }
-        @keyframes globe-float { 0%,100% { transform: translateY(-50%) rotateY(0deg); } 50% { transform: translateY(calc(-50% - 22px)) rotateY(18deg); } }
+        @keyframes globe-float { 0%,100% { transform: translate(-50%, -50%) rotateY(0deg) scale(1.35); } 50% { transform: translate(-50%, calc(-50% - 16px)) rotateY(18deg) scale(1.35); } }
         .hero-visual {
           animation: hero-orbit 5.5s ease-in-out infinite;
           transform-style: preserve-3d;
