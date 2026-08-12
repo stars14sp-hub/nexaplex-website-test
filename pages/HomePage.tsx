@@ -57,18 +57,18 @@ const HomePage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#f7f5f0]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.20),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(12,44,74,0.15),transparent_30%)]"></div>
+      <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#071521]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl lg:max-w-xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#102a43] leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
               Scale Faster. <span className="text-gradient whitespace-nowrap">Senior-Led.</span>
             </h1>
 
             <div className="relative mb-10 group">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl font-medium">
-  Strategic <span className="text-slate-900 font-bold underline decoration-blue-500/30 decoration-4 underline-offset-4">Microsoft 365, SharePoint, Workflow Automation & AI solutions </span> designed to streamline operations, automate business processes, and improve collaboration across your organization.
+              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl font-medium">
+  Strategic <span className="text-white font-bold underline decoration-[#c9a55c]/50 decoration-4 underline-offset-4">Microsoft 365, SharePoint, Workflow Automation & AI solutions </span> designed to streamline operations, automate business processes, and improve collaboration across your organization.
 </p>
             </div>
 
@@ -77,13 +77,13 @@ const HomePage: React.FC = () => {
                 href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#102a43] text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-xl shadow-slate-400/30 hover:bg-[#173f66] hover:shadow-2xl hover:scale-105 active:scale-95 text-center transform-gpu"
+                className="bg-[#c9a55c] text-[#071521] px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-xl shadow-slate-400/30 hover:bg-[#e0c17d] hover:shadow-2xl hover:scale-105 active:scale-95 text-center transform-gpu"
               >
                Book Free Discovery Call
               </a>
               <Link
                 to="/services"
-                className="bg-white/80 text-[#102a43] border border-[#c9a55c]/40 px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-white hover:scale-105 active:scale-95 text-center transform-gpu"
+                className="bg-white/10 text-white border border-white/30 backdrop-blur-md px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-white/20 hover:scale-105 active:scale-95 text-center transform-gpu"
               >
                 Explore Solutions
               </Link>
@@ -100,7 +100,7 @@ const HomePage: React.FC = () => {
   ].map((item) => (
     <span
       key={item}
-      className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-violet-500/20 border border-blue-300/60 text-sm font-semibold text-slate-800 backdrop-blur-sm text-center"
+      className="px-4 py-2 rounded-full bg-gradient-to-r from-white/10 to-[#c9a55c]/20 border border-[#c9a55c]/50 text-sm font-semibold text-slate-100 backdrop-blur-sm text-center"
     >
       {item}
     </span>
@@ -113,9 +113,9 @@ const HomePage: React.FC = () => {
         {/* Hero Illustration Side */}
         <div className="absolute top-12 right-0 w-1/2 h-full pointer-events-none hidden lg:block">
           <div className="relative w-full h-full flex items-center justify-center">
-            <div className="absolute w-[800px] h-[800px] bg-gradient-to-br from-blue-100 via-pink-100 to-indigo-50 rounded-full opacity-30 blur-[120px]"></div>
+            <div className="absolute w-[800px] h-[800px] bg-gradient-to-br from-[#1f5c89] via-[#102a43] to-[#c9a55c] rounded-full opacity-35 blur-[120px]"></div>
 
-            <div className="relative w-full max-w-2xl animate-[float_6s_ease-in-out_infinite] transition-all duration-1000 transform hover:scale-[1.03] hover:[transform:rotateY(-4deg)_rotateX(2deg)] [perspective:1200px]">
+            <div className="hero-visual relative w-full max-w-2xl transition-all duration-1000 transform hover:scale-[1.04] [perspective:1200px]">
               <div className="bg-white/90 p-3 rounded-[3.5rem] shadow-[0_40px_100px_-20px_rgba(15,23,42,0.24)] border border-[#c9a55c]/35 relative z-10 overflow-hidden group">
                 <img
                   src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=85&w=1600"
