@@ -116,6 +116,22 @@
         .animate-bounce-slow {
           animation: bounce-slow 4s infinite;
         }
+        .hero-headline { transform-style: preserve-3d; }
+        .hero-word {
+          display: inline-block;
+          text-shadow: 0 10px 0 rgba(3, 12, 23, 0.4), 0 20px 28px rgba(0, 0, 0, 0.36);
+          animation: headline-depth 5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+          transform-style: preserve-3d;
+        }
+        .hero-word-accent {
+          color: #e8cf98;
+          animation-delay: 220ms;
+          text-shadow: 0 9px 0 #7f5d20, 0 18px 30px rgba(0, 0, 0, 0.42);
+        }
+        @keyframes headline-depth {
+          0%, 100% { transform: translateZ(0) rotateX(0deg) rotateY(0deg); }
+          50% { transform: translateZ(38px) rotateX(7deg) rotateY(-4deg); }
+        }
         .hero-visual {
           animation: hero-orbit 5.5s ease-in-out infinite;
           transform-style: preserve-3d;
@@ -141,7 +157,7 @@
           50% { transform: translate3d(0, -14px, 0) rotateY(-2deg); }
         }
         @media (prefers-reduced-motion: reduce) {
-          .animate-\[float_6s_ease-in-out_infinite\], .hero-visual { animation: none !important; }
+          .animate-\[float_6s_ease-in-out_infinite\], .hero-visual, .hero-word { animation: none !important; }
         }
     </style>
 <script type="importmap">
