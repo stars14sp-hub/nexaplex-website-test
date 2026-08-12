@@ -57,10 +57,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 bg-slate-50">
+      <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#f7f5f0]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.20),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(12,44,74,0.15),transparent_30%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl lg:max-w-xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#102a43] leading-[1.1] mb-8 tracking-tight">
               Scale Faster. <span className="text-gradient whitespace-nowrap">Senior-Led.</span>
             </h1>
 
@@ -76,13 +77,13 @@ const HomePage: React.FC = () => {
                 href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="accent-gradient text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-xl shadow-blue-200/50 hover:shadow-blue-300 hover:brightness-110 hover:scale-105 active:scale-95 text-center transform-gpu"
+                className="bg-[#102a43] text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-xl shadow-slate-400/30 hover:bg-[#173f66] hover:shadow-2xl hover:scale-105 active:scale-95 text-center transform-gpu"
               >
                Book Free Discovery Call
               </a>
               <Link
                 to="/services"
-                className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-slate-50 hover:scale-105 active:scale-95 text-center transform-gpu"
+                className="bg-white/80 text-[#102a43] border border-[#c9a55c]/40 px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-white hover:scale-105 active:scale-95 text-center transform-gpu"
               >
                 Explore Solutions
               </Link>
@@ -114,10 +115,10 @@ const HomePage: React.FC = () => {
           <div className="relative w-full h-full flex items-center justify-center">
             <div className="absolute w-[800px] h-[800px] bg-gradient-to-br from-blue-100 via-pink-100 to-indigo-50 rounded-full opacity-30 blur-[120px]"></div>
 
-            <div className="relative w-full max-w-2xl transition-all duration-1000 transform hover:scale-[1.01]">
-              <div className="bg-white p-3 rounded-[3.5rem] shadow-[0_40px_100px_-20px_rgba(15,23,42,0.15)] border border-slate-200 relative z-10 overflow-hidden group">
+            <div className="relative w-full max-w-2xl animate-[float_6s_ease-in-out_infinite] transition-all duration-1000 transform hover:scale-[1.03] hover:[transform:rotateY(-4deg)_rotateX(2deg)] [perspective:1200px]">
+              <div className="bg-white/90 p-3 rounded-[3.5rem] shadow-[0_40px_100px_-20px_rgba(15,23,42,0.24)] border border-[#c9a55c]/35 relative z-10 overflow-hidden group">
                 <img
-                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1600"
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=85&w=1600"
                   alt="Senior Engineering Expert Collaboration"
                   className="w-full h-auto rounded-[2.8rem] object-cover aspect-[4/3] brightness-[1.01] saturate-[1.05] transition-transform duration-[2s] group-hover:scale-105"
                 />
@@ -126,7 +127,7 @@ const HomePage: React.FC = () => {
                 <div className="absolute top-8 left-8 pointer-events-none">
                   <div className="px-6 py-5 bg-white/95 backdrop-blur-2xl rounded-[1.8rem] border border-slate-100 ring-1 ring-slate-900/5 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.1)] pointer-events-auto group/badge transition-all duration-500 hover:scale-105">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20 transform group-hover/badge:rotate-3 transition-transform">
+                      <div className="w-12 h-12 bg-[#102a43] rounded-2xl flex items-center justify-center shadow-lg shadow-slate-500/20 transform group-hover/badge:rotate-3 transition-transform">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
