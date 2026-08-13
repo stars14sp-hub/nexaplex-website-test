@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
               Senior-led Microsoft consulting
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.02] mb-8 tracking-[-0.035em]">
-              Microsoft 365 consulting, <span className="text-gradient">built for operational scale.</span>
+              Microsoft 365 Solutions <span className="text-gradient">Built for Operational Scale.</span>
             </h1>
 
             <div className="relative mb-10 max-w-2xl">

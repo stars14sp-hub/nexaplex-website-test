@@ -201,27 +201,14 @@
           isolation: isolate;
           min-height: 480px;
           background:
-            radial-gradient(circle at 78% 18%, rgba(85, 208, 223, 0.36), transparent 28%),
-            radial-gradient(circle at 18% 80%, rgba(201, 165, 92, 0.22), transparent 34%),
-            linear-gradient(145deg, #f9fcff 0%, #e9f4fa 45%, #d9edf4 100%);
+            linear-gradient(145deg, rgba(7,21,33,.03), rgba(11,95,147,.14)),
+            url('/nexaplex-website-test/images/workplace-collaboration.webp') center / cover no-repeat;
         }
         .premium-system-visual > img {
           visibility: hidden;
         }
         .premium-system-visual::before {
-          content: '';
-          position: absolute;
-          inset: 52px 42px 42px;
-          z-index: -1;
-          border: 1px solid rgba(11, 95, 147, 0.18);
-          border-radius: 2.4rem;
-          background:
-            linear-gradient(rgba(11, 95, 147, 0.07) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(11, 95, 147, 0.07) 1px, transparent 1px),
-            linear-gradient(145deg, rgba(255,255,255,.94), rgba(229,244,250,.82));
-          background-size: 32px 32px, 32px 32px, auto;
-          box-shadow: 0 28px 70px -30px rgba(7, 42, 67, 0.38), inset 0 1px 0 white;
-          transform: perspective(900px) rotateY(-5deg) rotateX(3deg);
+          content: none;
         }
         .premium-system-visual::after {
           content: '';
@@ -233,6 +220,7 @@
           animation: system-sheen 8s ease-in-out infinite;
         }
         .premium-system-dashboard {
+          display: none;
           position: absolute;
           inset: 88px 58px 46px;
           z-index: 2;
