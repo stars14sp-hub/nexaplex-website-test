@@ -57,13 +57,17 @@ const AboutPage: React.FC = () => {
           {/* Image Column */}
             <div className="lg:sticky lg:top-40 group h-fit">
             <div className="relative">
-              <div className="absolute -inset-4 bg-blue-100 rounded-[3.5rem] -z-10 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity"></div>
-    <div className="overflow-hidden rounded-[3rem] shadow-2xl border border-white h-[480px] lg:h-[580px]">
+              <div className="absolute -inset-4 bg-gradient-to-br from-[#d9f3fa] to-[#ead9ad] rounded-[3.5rem] -z-10 opacity-50 blur-2xl group-hover:opacity-70 transition-opacity"></div>
+    <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-b from-white to-[#edf7fa] shadow-[0_35px_80px_-30px_rgba(7,42,67,0.45)] border border-white h-[480px] lg:h-[580px]">
   <img
-    src="/images/Shital_Photo.jpg"
+    src={`${import.meta.env.BASE_URL}images/Shital_Photo.webp`}
     alt="Shital Parikh, Founder of NexaPlex Web Hub"
-   className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-105"
+   className="w-full h-full object-cover object-[center_18%] transition-transform duration-700 group-hover:scale-[1.03]"
   />
+  <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/20 bg-[#071521]/90 px-6 py-5 text-white shadow-xl backdrop-blur-xl">
+    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#e8cf98]">Founder-led delivery</p>
+    <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-100">Direct senior oversight from strategy through implementation.</p>
+  </div>
 </div>
             </div>
           </div>
