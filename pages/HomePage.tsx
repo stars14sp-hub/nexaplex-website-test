@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
 
             <div className="relative mb-10 max-w-2xl">
               <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
-                Strategy, architecture, and implementation for SharePoint, workflow automation, document management, and AI—designed to reduce operational friction and give growing teams a more dependable digital workplace.
+                Strategy, architecture, and implementation for <span className="font-semibold text-white">SharePoint, workflow automation, document management, and AI</span>—designed to reduce operational friction and give growing teams a more dependable digital workplace.
               </p>
             </div>
 
