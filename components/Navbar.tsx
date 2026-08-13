@@ -40,7 +40,13 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        <button className="p-2 text-white md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle navigation">
+        <button
+          className="p-2 text-white md:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle navigation"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation"
+        >
           <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'} />
           </svg>
@@ -48,9 +54,9 @@ const Navbar: React.FC = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="border-t border-violet-300/20 bg-[#281747] px-5 py-5 md:hidden">
+        <div id="mobile-navigation" className="border-t border-violet-300/20 bg-[#281747] px-5 py-5 md:hidden">
           {navLinks.map((link) => <Link key={link.path} to={link.path} className="block border-b border-violet-300/20 py-3 text-base font-medium text-white">{link.name}</Link>)}
-          <a href="https://book.stripe.com/7sYeVceJt9567lW3uT9bO00" target="_blank" rel="noopener noreferrer" className="mt-4 block rounded-full bg-[#f5d58f] px-5 py-3 text-center font-bold text-[#281747]">Book Strategy Audit</a>
+          <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="mt-4 block rounded-full bg-[#f5d58f] px-5 py-3 text-center font-bold text-[#281747]">Book Free Discovery Call</a>
         </div>
       )}
     </nav>

@@ -1,7 +1,30 @@
-import React, { useState } from 'react';
-import { SERVICES } from '../constants';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const PACKAGE_MAP: Record<string, { name: string; service: string }> = {
+  'workflow-automation': {
+    name: 'Workflow Automation Starter',
+    service: 'workflow-automation',
+  },
+  'document-management': {
+    name: 'Document Management Foundation',
+    service: 'document-management-system',
+  },
+  'employee-portal': {
+    name: 'Employee Portal Launch',
+    service: 'sharepoint-intranet-design',
+  },
+  'microsoft-365-support': {
+    name: 'Microsoft 365 Optimization & Support',
+    service: 'm365-architecture-governance',
+  },
+};
 
 const ContactPage: React.FC = () => {
+  const location = useLocation();
+  const packageId = new URLSearchParams(location.search).get('package');
+  const selectedPackage = packageId ? PACKAGE_MAP[packageId] : null;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -9,6 +32,15 @@ const ContactPage: React.FC = () => {
     service: '',
     message: ''
   });
+
+  useEffect(() => {
+    if (selectedPackage) {
+      setFormData((previous) => ({
+        ...previous,
+        service: selectedPackage.service,
+      }));
+    }
+  }, [selectedPackage]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +54,10 @@ const ContactPage: React.FC = () => {
         },
         body: JSON.stringify({
           ...formData,
-          _subject: "New Project Inquiry - NexaPlex",
+          selectedPackage: selectedPackage?.name || 'Not specified',
+          _subject: selectedPackage
+            ? `Package Inquiry - ${selectedPackage.name}`
+            : "New Project Inquiry - NexaPlex",
           _template: "table",
           _captcha: "false"
         })
@@ -196,6 +231,19 @@ const ContactPage: React.FC = () => {
                 onSubmit={handleSubmit}
                 className="space-y-6 mt-4"
               >
+                {selectedPackage && (
+                  <div className="rounded-2xl border border-[#c9a55c]/45 bg-[#fffaf0] px-5 py-4">
+                    <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#9a6f20]">
+                      Selected Service Package
+                    </p>
+                    <p className="mt-1 font-bold text-[#281747]">
+                      {selectedPackage.name}
+                    </p>
+                    <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                      Your inquiry will include this package selection automatically.
+                    </p>
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-black text-slate-400 uppercase tracking-widest mb-2 ml-1">Name</label>
