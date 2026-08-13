@@ -60,17 +60,20 @@ const HomePage: React.FC = () => {
       <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#071521]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl lg:max-w-xl relative">
+          <div className="max-w-3xl lg:max-w-2xl relative">
             <div className="relative z-10">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
-              Scale Faster. <span className="text-gradient whitespace-nowrap">Senior-Led.</span>
+            <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#c9a55c]/35 bg-white/[0.07] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ead6a7] backdrop-blur-md sm:text-xs">
+              <span className="h-2 w-2 rounded-full bg-[#55d0df] shadow-[0_0_12px_rgba(85,208,223,0.8)]" />
+              Senior-led Microsoft consulting
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.02] mb-8 tracking-[-0.035em]">
+              Microsoft 365 consulting, <span className="text-gradient">built for operational scale.</span>
             </h1>
 
-            <div className="relative mb-10 group">
-              <div className="absolute -left-4 top-0 bottom-0 w-1 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-2xl font-medium">
-  Strategic <span className="text-white font-bold underline decoration-[#c9a55c]/50 decoration-4 underline-offset-4">Microsoft 365, SharePoint, Workflow Automation & AI solutions </span> designed to streamline operations, automate business processes, and improve collaboration across your organization.
-</p>
+            <div className="relative mb-10 max-w-2xl">
+              <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium">
+                Strategy, architecture, and implementation for <span className="font-semibold text-white">SharePoint, workflow automation, and AI</span>—designed to reduce operational friction and give growing teams a more dependable digital workplace.
+              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
@@ -83,7 +86,7 @@ const HomePage: React.FC = () => {
                Book Free Discovery Call
               </a>
               <Link
-                to="/services"
+                to="/solutions"
                 className="bg-white/10 text-white border border-white/30 backdrop-blur-md px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 shadow-sm hover:shadow-md hover:bg-white/20 hover:scale-105 active:scale-95 text-center transform-gpu"
               >
                 Explore Solutions
@@ -335,4 +338,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-

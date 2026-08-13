@@ -37,8 +37,8 @@ const AmbientWave: React.FC = () => (
           d="M-120 312C170 174 386 362 706 236C1009 117 1191 190 1715 30"
           fill="none"
           stroke="#061d2e"
-          strokeOpacity="0.24"
-          strokeWidth="86"
+          strokeOpacity="0.14"
+          strokeWidth="62"
           strokeLinecap="round"
           filter="url(#wave-shadow)"
         />
@@ -46,21 +46,21 @@ const AmbientWave: React.FC = () => (
           d="M-120 292C170 154 386 342 706 216C1009 97 1191 170 1715 10"
           fill="none"
           stroke="url(#wave-main)"
-          strokeWidth="72"
+          strokeWidth="48"
           strokeLinecap="round"
         />
         <path
           d="M-120 266C170 128 386 316 706 190C1009 71 1191 144 1715-16"
           fill="none"
           stroke="url(#wave-edge)"
-          strokeWidth="7"
+          strokeWidth="4"
           strokeLinecap="round"
         />
         <path
           d="M-90 380C248 258 481 403 816 295C1112 199 1330 233 1690 122"
           fill="none"
           stroke="url(#wave-secondary)"
-          strokeWidth="28"
+          strokeWidth="18"
           strokeLinecap="round"
         />
         <path

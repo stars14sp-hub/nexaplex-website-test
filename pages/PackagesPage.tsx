@@ -76,7 +76,7 @@ const PackagesPage: React.FC = () => (
   <main className="min-h-screen overflow-hidden bg-[#f7f5f0]">
     <section className="relative overflow-hidden pb-20 pt-32">
       <div className="pointer-events-none absolute left-1/2 top-16 h-[520px] w-[920px] -translate-x-1/2 rounded-full bg-[#c9a55c]/15 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#6f3f8f]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#2d9fc4]/10 blur-3xl" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <p className="mb-5 text-xs font-black uppercase tracking-[0.24em] text-[#9a6f20]">
@@ -92,7 +92,7 @@ const PackagesPage: React.FC = () => (
         </p>
         <Link
           to="/contact"
-          className="mt-9 inline-flex items-center justify-center rounded-full bg-[#281747] px-8 py-4 text-base font-bold text-white shadow-xl shadow-[#281747]/15 transition-all hover:-translate-y-0.5 hover:bg-[#3b215f]"
+          className="mt-9 inline-flex items-center justify-center rounded-full bg-[#0b5f93] px-8 py-4 text-base font-bold text-white shadow-xl shadow-[#0b5f93]/15 transition-all hover:-translate-y-0.5 hover:bg-[#084a75]"
         >
           Discuss Your Needs
         </Link>
@@ -107,12 +107,12 @@ const PackagesPage: React.FC = () => (
               key={pkg.title}
               className={`relative flex flex-col rounded-[2rem] border p-8 transition-transform duration-300 hover:-translate-y-1 sm:p-10 ${
                 pkg.featured
-                  ? 'border-[#c9a55c] bg-[#281747] text-white shadow-[0_32px_70px_-24px_rgba(40,23,71,0.65)]'
+                  ? 'border-[#c9a55c] bg-[#102a43] text-white shadow-[0_32px_70px_-24px_rgba(16,42,67,0.55)]'
                   : 'border-[#c9a55c]/35 bg-white/90 text-[#102a43] shadow-xl shadow-slate-200/50'
               }`}
             >
               {pkg.featured && (
-                <div className="absolute -top-4 left-8 rounded-full bg-[#f5d58f] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#281747]">
+                <div className="absolute -top-4 left-8 rounded-full bg-[#f5d58f] px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#102a43]">
                   Recommended Starting Point
                 </div>
               )}
@@ -134,7 +134,7 @@ const PackagesPage: React.FC = () => (
               </p>
               <p
                 className={`mb-8 leading-relaxed ${
-                  pkg.featured ? 'text-violet-100' : 'text-slate-600'
+                  pkg.featured ? 'text-slate-200' : 'text-slate-600'
                 }`}
               >
                 {pkg.description}
@@ -152,8 +152,8 @@ const PackagesPage: React.FC = () => (
                       aria-hidden="true"
                       className={`mt-1.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-black ${
                         pkg.featured
-                          ? 'bg-[#f5d58f] text-[#281747]'
-                          : 'bg-[#281747] text-white'
+                          ? 'bg-[#f5d58f] text-[#102a43]'
+                          : 'bg-[#0b5f93] text-white'
                       }`}
                     >
                       ✓
@@ -167,7 +167,7 @@ const PackagesPage: React.FC = () => (
                 to={`/contact?package=${pkg.packageId}`}
                 className={`mt-auto inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-bold transition-all ${
                   pkg.featured
-                    ? 'bg-[#f5d58f] text-[#281747] hover:bg-[#ffe3a4]'
+                    ? 'bg-[#f5d58f] text-[#102a43] hover:bg-[#ffe3a4]'
                     : 'bg-[#102a43] text-white hover:bg-[#173f66]'
                 }`}
               >
