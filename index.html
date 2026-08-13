@@ -103,6 +103,43 @@
             transform: translateY(-8px);
         }
 
+        /* Global dimensional ribbon */
+        .ambient-wave {
+          position: absolute;
+          top: 58px;
+          left: 0;
+          z-index: 30;
+          width: 100%;
+          height: clamp(280px, 31vw, 430px);
+          overflow: hidden;
+          pointer-events: none;
+          opacity: 0.72;
+          isolation: isolate;
+          -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.95) 72%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.95) 72%, transparent 100%);
+        }
+        .ambient-wave__motion {
+          position: absolute;
+          inset: -7% -6% 0;
+          transform-style: preserve-3d;
+          will-change: transform;
+          animation: ambient-wave-drift 14s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+        }
+        .ambient-wave__svg {
+          display: block;
+          width: 112%;
+          height: 100%;
+          filter: drop-shadow(0 22px 28px rgba(7, 42, 67, 0.15));
+        }
+        @keyframes ambient-wave-drift {
+          0%, 100% {
+            transform: perspective(1100px) translate3d(-1.5%, 0, 0) rotateX(3deg) rotateZ(-0.35deg);
+          }
+          50% {
+            transform: perspective(1100px) translate3d(1.5%, -14px, 28px) rotateX(-2deg) rotateZ(0.35deg);
+          }
+        }
+
         @keyframes bounce-slow {
           0%, 100% {
             transform: translateY(-5%);
@@ -164,7 +201,10 @@
         .package-card:hover {
           transform: perspective(1200px) rotateX(3deg) rotateY(-3deg) translateY(-12px);
         }
-        @media (max-width: 1023px) { .globe-orbit { display: none; } }
+        @media (max-width: 1023px) {
+          .globe-orbit { display: none; }
+          .ambient-wave { top: 54px; height: 300px; opacity: 0.58; }
+        }
         @media (prefers-reduced-motion: reduce) {
           .package-card, .package-card:hover { transform: none; transition: none; }
         }
@@ -173,7 +213,8 @@
           50% { transform: translate3d(0, -14px, 0) rotateY(-2deg); }
         }
         @media (prefers-reduced-motion: reduce) {
-          .animate-\[float_6s_ease-in-out_infinite\], .hero-visual, .hero-word { animation: none !important; }
+          html:focus-within { scroll-behavior: auto; }
+          .ambient-wave__motion, .animate-\[float_6s_ease-in-out_infinite\], .hero-visual, .hero-word { animation: none !important; }
         }
     </style>
 <script type="importmap">

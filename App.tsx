@@ -12,27 +12,29 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import PackagesPage from './pages/PackagesPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import ScrollToTop from './components/ScrollToTop';
+import AmbientWave from './components/AmbientWave';
 
 const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex min-h-screen flex-col">
         <Navbar />
-        <main className="flex-grow">
+        <main className="relative flex-grow overflow-hidden">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/solutions" element={<ServicesPage />} />
-<Route path="/services" element={<Navigate to="/solutions" replace />} />
+            <Route path="/services" element={<Navigate to="/solutions" replace />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
             <Route path="/case-studies" element={<PortfolioPage />} />
             <Route path="/packages" element={<PackagesPage />} />
-<Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
+            <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           </Routes>
+          <AmbientWave />
         </main>
         <Footer />
       </div>
