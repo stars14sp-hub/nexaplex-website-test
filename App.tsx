@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Navbar />
-        <main className="relative flex-grow overflow-hidden">
+        <main className="relative flex-grow overflow-x-clip">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/solutions" element={<ServicesPage />} />
