@@ -119,12 +119,12 @@ const AboutPage: React.FC = () => {
         </div>
 
         {/* Founder-Led Oversight (Visual Match to Screenshot) */}
-        <div className="bg-[#0a1226] rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-2xl">
+        <div className="bg-[#0a1226] rounded-[3rem] p-10 md:p-14 relative overflow-hidden shadow-2xl">
            <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
            <div className="max-w-4xl relative z-10">
-             <h3 className="text-3xl font-bold text-white mb-10 tracking-tight">Founder-Led Oversight</h3>
-             <blockquote className="text-xl md:text-2xl font-medium text-slate-300 italic mb-12 leading-relaxed border-l-4 border-blue-500 pl-8">
-               "NexaPlex is built on precision, not volume. I personally lead every engagement to ensure clarity, consistency, and long-term scalability. Complex digital environments require experienced judgment and direct involvement—not handoffs or guesswork. My role is to translate your business objectives into secure, resilient, and well-structured solutions."
+             <h3 className="text-3xl font-bold text-white mb-7 tracking-tight">Founder-Led Oversight</h3>
+             <blockquote className="text-lg md:text-xl font-medium text-slate-300 italic mb-8 leading-relaxed border-l-4 border-blue-500 pl-6 md:pl-8">
+               "NexaPlex is built on precision, not volume. I personally lead every engagement to ensure clarity, consistency, and long-term scalability. Through direct involvement, I translate your business objectives into secure, resilient, and well-structured solutions."
              </blockquote>
              
              <div className="flex items-center">
