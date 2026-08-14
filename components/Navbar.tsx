@@ -26,12 +26,15 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#dac89c]/55 bg-[#fffdf8]/90 py-3 shadow-[0_12px_40px_rgba(7,21,33,0.10)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" aria-label="NexaPlex Web Hub home" className="group flex items-center">
+        <Link to="/" aria-label="NexaPlex Web Hub home" className="group flex flex-col items-start">
           <img
             src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`}
             alt="NexaPlex Web Hub"
             className="h-10 w-auto max-w-[205px] object-contain transition-transform duration-300 group-hover:-translate-y-0.5 sm:h-11 sm:max-w-[235px] xl:h-12 xl:max-w-[260px]"
           />
+          <span className="hidden pl-1 pt-0.5 text-[7px] font-black uppercase tracking-[0.18em] text-[#31546b] lg:block xl:text-[8px]">
+            Microsoft 365 Solutions That Drive Results
+          </span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex xl:gap-2">

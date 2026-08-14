@@ -9,14 +9,18 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-12 lg:col-span-3">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="accent-gradient w-10 h-8 rounded-lg flex items-center justify-center text-white font-black text-xs">NP</div>
-              <span className="text-xl font-bold text-white">NexaPlex <span className="text-blue-400">Web Hub</span></span>
-            </div>
+            <Link to="/" aria-label="NexaPlex Web Hub home" className="mb-4 inline-flex rounded-2xl border border-white/15 bg-white px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,.24)]">
+              <img
+                src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`}
+                alt="NexaPlex Web Hub"
+                className="h-12 w-auto max-w-[245px] object-contain"
+              />
+            </Link>
+            <p className="mb-5 text-[9px] font-black uppercase tracking-[0.18em] text-[#7dd3df]">
+              Microsoft 365 Solutions That Drive Results
+            </p>
             <p className="text-sm leading-relaxed mb-6 max-w-sm text-slate-400">
-             <p>
-  Expert SharePoint and Microsoft 365 solutions, delivered by a senior architect to streamline operations, automate workflows, and improve organizational visibility.
-</p>
+              Expert SharePoint and Microsoft 365 solutions, delivered by a senior architect to streamline operations, automate workflows, and improve organizational visibility.
             </p>
             <div className="flex space-x-4">
               <a 
