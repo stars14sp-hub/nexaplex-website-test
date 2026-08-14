@@ -314,7 +314,7 @@ const HomePage: React.FC = () => {
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">Direct Access to Senior Expertise.</h2>
               <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                No account managers. No juniors. Work directly with <strong>Shital Parikh</strong> — the Founder & Owner — to solve your Microsoft 365 or web engineering challenges through dedicated <strong>Founder-Led Oversight.</strong>
+                No account managers. No juniors. Work directly with <strong>Shital Parikh</strong> — the Founder & Lead Microsoft 365 Consultant — to solve your Microsoft 365 or web engineering challenges through dedicated <strong>Founder-Led Oversight.</strong>
               </p>
               <a
                 href="https://book.stripe.com/7sYeVceJt9567lW3uT9bO00"

@@ -133,7 +133,7 @@ const AboutPage: React.FC = () => {
                </div>
                <div>
                  <p className="font-bold text-white text-lg tracking-tight leading-none mb-1">Shital Parikh</p>
-                 <p className="text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em]">Founder & Owner, NEXAPLEX WEB HUB, LLC</p>
+                 <p className="text-blue-400 font-bold text-[10px] uppercase tracking-[0.2em]">Founder & Lead Microsoft 365 Consultant, NEXAPLEX WEB HUB, LLC</p>
                </div>
              </div>
            </div>
