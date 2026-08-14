@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface AmbientWaveProps {
-  variant?: 'global' | 'contact';
+  variant?: 'global' | 'contact' | 'case-studies';
 }
 
 const AmbientWave: React.FC<AmbientWaveProps> = ({ variant = 'global' }) => (

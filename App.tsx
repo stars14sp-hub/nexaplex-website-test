@@ -16,7 +16,8 @@ import AmbientWave from './components/AmbientWave';
 
 const PageAmbientWave: React.FC = () => {
   const { pathname } = useLocation();
-  return pathname === '/contact' ? null : <AmbientWave />;
+  if (pathname === '/contact') return null;
+  return <AmbientWave variant={pathname === '/case-studies' ? 'case-studies' : 'global'} />;
 };
 
 const App: React.FC = () => {
