@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Logo & Description */}
           <div className="col-span-1 md:col-span-12 lg:col-span-3">
-            <Link to="/" aria-label="NexaPlex Web Hub home" className="mb-4 inline-flex rounded-2xl border border-white/35 bg-white/90 px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,.24)] backdrop-blur-sm">
+            <Link to="/" aria-label="NexaPlex Web Hub home" className="mb-4 inline-flex rounded-2xl border border-white/15 bg-white px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,.24)]">
               <img
                 src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`}
                 alt="NexaPlex Web Hub"
