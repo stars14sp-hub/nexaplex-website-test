@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NexaPlex Web Hub</title>
+    <script>
+      (function () {
+        var repoBase = '/nexaplex-website-test/';
+        var pathname = window.location.pathname;
+        var relativePath = pathname.indexOf(repoBase) === 0
+          ? pathname.slice(repoBase.length)
+          : pathname.replace(/^\//, '');
+        var target = repoBase + '?p=/' + encodeURIComponent(relativePath);
+        if (window.location.search) {
+          target += '&q=' + encodeURIComponent(window.location.search.slice(1));
+        }
+        target += window.location.hash;
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
