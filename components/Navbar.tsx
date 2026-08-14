@@ -26,19 +26,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#dac89c]/55 bg-[#fffdf8]/90 py-3 shadow-[0_12px_40px_rgba(7,21,33,0.10)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" aria-label="NexaPlex Web Hub home" className="group flex items-center gap-3 leading-tight">
-          <span className="relative grid h-10 w-10 place-items-center overflow-hidden rounded-2xl bg-[#0b3657] text-base font-bold text-white shadow-[0_9px_20px_rgba(11,54,87,0.22)] transition-transform duration-300 group-hover:-translate-y-0.5">
-            N
-            <span className="absolute -bottom-2 -right-2 h-5 w-5 rounded-full bg-[#52c7df] opacity-80" />
-          </span>
-          <span className="flex flex-col">
-            <span className="text-xl font-bold tracking-tight text-[#102a43]">
-              NexaPlex <span className="text-[#9a6f20]">Web Hub</span>
-            </span>
-            <span className="hidden pt-1 text-[8px] font-bold uppercase tracking-[0.16em] text-slate-500 xl:block">
-              Microsoft 365 Solutions That Drive Results
-            </span>
-          </span>
+        <Link to="/" aria-label="NexaPlex Web Hub home" className="group flex items-center">
+          <img
+            src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`}
+            alt="NexaPlex Web Hub"
+            className="h-10 w-auto max-w-[205px] object-contain transition-transform duration-300 group-hover:-translate-y-0.5 sm:h-11 sm:max-w-[235px] xl:h-12 xl:max-w-[260px]"
+          />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex xl:gap-2">
