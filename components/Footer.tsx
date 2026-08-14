@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               <img
                 src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`}
                 alt="NexaPlex Web Hub"
-                className="h-12 w-auto max-w-[245px] object-contain"
+                className="h-14 w-auto max-w-[265px] object-contain"
               />
             </Link>
             <p className="mb-5 text-[9px] font-black uppercase tracking-[0.18em] text-[#7dd3df]">
