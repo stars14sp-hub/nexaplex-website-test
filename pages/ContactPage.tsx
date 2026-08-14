@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import AmbientWave from '../components/AmbientWave';
 
 const PACKAGE_MAP: Record<string, { name: string; service: string }> = {
   'workflow-automation': {
@@ -64,7 +65,7 @@ const ContactPage: React.FC = () => {
       });
 
       if (response.ok) {
-        alert('Thank you! Your project details have been received. Founder & Owner Shital Parikh will personally review your inquiry and reach out within 1 business day to discuss next steps.');
+        alert('Thank you! Your project details have been received. Founder & Lead Consultant Shital Parikh will personally review your inquiry and reach out within 1 business day to discuss next steps.');
         setFormData({
           name: '',
           email: '',
@@ -82,18 +83,21 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative pt-32 pb-24 bg-slate-50">
+      <div className="contact-wave-zone" aria-hidden="true">
+        <AmbientWave variant="contact" />
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 mb-14">
           <div className="flex-1">
             <h1 className="text-5xl font-bold text-slate-900 mb-8 tracking-tight leading-[1.1]">
-              Let's Build Something <span className="text-gradient">Significant.</span>
+              Let's Build Something <span className="signature-text-gradient">Significant.</span>
             </h1>
             <p className="text-xl text-slate-600 mb-12 leading-relaxed font-medium">
   Ready to modernize your operations? Complete our project inquiry form,
   schedule a free 15-minute discovery call, or book a focused strategy
-  audit with our Founder & Owner, <strong>Shital Parikh</strong>.
+  audit with our Founder & Lead Consultant, <strong>Shital Parikh</strong>.
 </p>
             
             <div className="space-y-6">

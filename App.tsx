@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -13,6 +13,11 @@ import PackagesPage from './pages/PackagesPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import ScrollToTop from './components/ScrollToTop';
 import AmbientWave from './components/AmbientWave';
+
+const PageAmbientWave: React.FC = () => {
+  const { pathname } = useLocation();
+  return pathname === '/contact' ? null : <AmbientWave />;
+};
 
 const App: React.FC = () => {
   return (
@@ -34,7 +39,7 @@ const App: React.FC = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           </Routes>
-          <AmbientWave />
+          <PageAmbientWave />
         </main>
         <Footer />
       </div>

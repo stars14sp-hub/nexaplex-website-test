@@ -1,7 +1,11 @@
 import React from 'react';
 
-const AmbientWave: React.FC = () => (
-  <div className="ambient-wave" aria-hidden="true">
+interface AmbientWaveProps {
+  variant?: 'global' | 'contact';
+}
+
+const AmbientWave: React.FC<AmbientWaveProps> = ({ variant = 'global' }) => (
+  <div className={`ambient-wave ambient-wave--${variant}`} aria-hidden="true">
     <div className="ambient-wave__motion">
       <svg
         className="ambient-wave__svg"
