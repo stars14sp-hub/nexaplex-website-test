@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -14,6 +14,21 @@ import TermsConditionsPage from './pages/TermsConditionsPage';
 import ScrollToTop from './components/ScrollToTop';
 import AmbientWave from './components/AmbientWave';
 
+const restoreSpaPath = () => {
+  const params = new URLSearchParams(window.location.search);
+  const encodedPath = params.get('p');
+  if (!encodedPath) return;
+
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const restoredPath = decodeURIComponent(encodedPath);
+  const restoredQuery = params.get('q');
+  const query = restoredQuery ? `?${decodeURIComponent(restoredQuery)}` : '';
+
+  window.history.replaceState(null, '', `${base}${restoredPath}${query}${window.location.hash}`);
+};
+
+restoreSpaPath();
+
 const PageAmbientWave: React.FC = () => {
   const { pathname } = useLocation();
   if (pathname === '/contact') return null;
@@ -21,8 +36,10 @@ const PageAmbientWave: React.FC = () => {
 };
 
 const App: React.FC = () => {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Navbar />
