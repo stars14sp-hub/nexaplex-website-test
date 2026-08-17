@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
+import HomePageExperiment from './pages/HomePageExperiment';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import AboutPage from './pages/AboutPage';
@@ -45,7 +45,7 @@ const App: React.FC = () => {
         <Navbar />
         <main className="relative flex-grow overflow-x-clip">
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePageExperiment />} />
             <Route path="/solutions" element={<ServicesPage />} />
             <Route path="/services" element={<Navigate to="/solutions" replace />} />
             <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
