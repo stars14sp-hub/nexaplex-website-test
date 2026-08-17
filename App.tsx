@@ -13,6 +13,7 @@ import PackagesPage from './pages/PackagesPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import ScrollToTop from './components/ScrollToTop';
 import AmbientWave from './components/AmbientWave';
+import SeoManager from './components/SeoManager';
 
 const restoreSpaPath = () => {
   const params = new URLSearchParams(window.location.search);
@@ -41,6 +42,7 @@ const App: React.FC = () => {
   return (
     <Router basename={basename}>
       <ScrollToTop />
+      <SeoManager />
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="relative flex-grow overflow-x-clip">
