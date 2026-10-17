@@ -7,6 +7,7 @@ import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import DigitalCardPage from './pages/DigitalCardPage';
 import PortfolioPage from './pages/PortfolioPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import PackagesPage from './pages/PackagesPage';
@@ -56,6 +57,7 @@ const App: React.FC = () => {
             <Route path="/portfolio" element={<Navigate to="/case-studies" replace />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/digital-card" element={<DigitalCardPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           </Routes>
