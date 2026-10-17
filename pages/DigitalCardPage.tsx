@@ -15,7 +15,7 @@ const DigitalCardPage: React.FC = () => {
   return <section className="min-h-[75vh] bg-slate-50 px-4 pb-20 pt-32">
     <div className="mx-auto max-w-md overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
       <div className="bg-gradient-to-br from-[#102a43] to-[#0b5f93] px-8 py-12 text-center text-white">
-        <p className="text-sm font-semibold tracking-widest text-sky-200">NEXAPLEX WEB HUB, LLC</p>
+        <div className="mx-auto mb-6 rounded-2xl bg-white px-5 py-4 shadow-md"><img src={`${import.meta.env.BASE_URL}images/NexaPlex_Logo_Horizontal_Web.webp`} alt="NexaPlex Web Hub logo" className="mx-auto h-auto w-full max-w-[250px] object-contain" /></div>
         <h1 className="mt-6 text-3xl font-bold">{name}</h1>
         <p className="mt-2 text-sky-100">Founder & Lead Consultant</p>
         <p className="mt-3 text-sm text-sky-100">SharePoint · Microsoft 365 · Workflow Automation</p>
