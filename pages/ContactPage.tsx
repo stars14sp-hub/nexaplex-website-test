@@ -92,13 +92,20 @@ const ContactPage: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 mb-14">
           <div className="flex-1">
             <h1 className="text-5xl font-bold text-slate-900 mb-8 tracking-tight leading-[1.1]">
-              Let's Build Something <span className="signature-text-gradient">Significant.</span>
+              Let’s talk about your <span className="signature-text-gradient">Microsoft 365 project.</span>
             </h1>
-            <p className="text-xl text-slate-600 mb-12 leading-relaxed font-medium">
-  Ready to modernize your operations? Complete our project inquiry form,
-  schedule a free 15-minute discovery call, or book a focused strategy
-  audit with our Founder & Lead Consultant, <strong>Shital Parikh</strong>.
-</p>
+            <p className="mb-6 text-xl font-medium leading-relaxed text-slate-600">
+              Whether you’re planning a SharePoint intranet or simplifying onboarding or approvals, tell me what you’d like to improve. You’ll hear directly from me.
+            </p>
+            <div className="mb-10 flex flex-wrap gap-3">
+              <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#0b5f93] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#084a75]">
+                Book a Free 15-Minute Call
+              </a>
+              <a href="#project-inquiry" className="rounded-full border border-[#0b5f93] bg-white px-5 py-3 text-center text-sm font-bold text-[#0b5f93] hover:bg-slate-100">
+                Send a Project Inquiry
+              </a>
+            </div>
+            <p className="mb-8 text-sm font-medium text-slate-600">Shital Parikh, Founder &amp; Lead Consultant</p>
             
             <div className="space-y-6">
               {/* Standard Email Contact */}
@@ -231,9 +238,9 @@ const ContactPage: React.FC = () => {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#4f5fb0] text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-xl">
                 Project Inquiry Form
               </div>
-              <form 
+              <form id="project-inquiry"
                 onSubmit={handleSubmit}
-                className="space-y-6 mt-4"
+                className="space-y-6 mt-4 scroll-mt-32"
               >
                 {selectedPackage && (
                   <div className="rounded-2xl border border-[#c9a55c]/45 bg-[#fffaf0] px-5 py-4">
