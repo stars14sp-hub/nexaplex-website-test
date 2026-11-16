@@ -61,15 +61,12 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {Date.now() < Date.parse('2026-12-19T00:00:00-06:00') && (
-            <aside aria-labelledby="january-planning-title" className="relative z-20 mb-8 flex flex-col gap-4 rounded-2xl border-l-4 border-[#c9a55c] bg-[#fffdf8] px-5 py-5 text-[#071521] shadow-xl sm:px-7 lg:flex-row lg:items-center lg:justify-between">
+            <aside aria-labelledby="january-planning-title" className="relative z-20 mb-8 rounded-2xl border-l-4 border-[#c9a55c] bg-[#fffdf8] px-5 py-5 text-[#071521] shadow-xl sm:px-7">
               <div>
                 <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#0b5f93]">January 2027 project planning</p>
                 <h2 id="january-planning-title" className="text-xl font-bold tracking-tight sm:text-2xl">Spend less time chasing approvals in 2027</h2>
                 <p className="mt-1 text-sm leading-relaxed text-slate-700">Use SharePoint and Power Automate to simplify approvals, onboarding, and everyday work.</p>
               </div>
-              <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 shrink-0 items-center justify-center self-start rounded-full bg-[#0b5f93] px-5 py-2.5 text-center text-sm font-bold text-white hover:bg-[#084a75] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b5f93] lg:self-auto">
-                Book a Free 15-Minute Call
-              </a>
             </aside>
           )}
           <div className="max-w-3xl lg:max-w-2xl relative">
