@@ -159,19 +159,6 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
-          {Date.now() < Date.parse('2026-12-19T00:00:00-06:00') && (
-            <aside id="year-end-review" aria-labelledby="year-end-review-title" className="relative z-10 mb-10 scroll-mt-36 flex flex-col gap-5 rounded-2xl border border-[#dac89c] border-l-4 border-l-[#c9a55c] bg-[#fffdf8] px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#0b5f93]">Paid Year-End Microsoft 365 Review</p>
-                <h3 id="year-end-review-title" className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Start January with a clear Microsoft 365 plan</h3>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-700">Have a SharePoint site that’s hard to navigate or a manual process that slows your team down? We’ll assess one site or workflow and give you a short action plan with the three improvements to tackle first.</p>
-              </div>
-              <Link to="/contact?inquiry=year-end-review" className="self-start rounded-full bg-[#0b5f93] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#084a75] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b5f93] lg:shrink-0 lg:self-center">
-                Request a Year-End Review
-              </Link>
-            </aside>
-          )}
-
           {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {SERVICES.map((service) => (
