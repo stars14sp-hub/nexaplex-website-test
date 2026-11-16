@@ -60,15 +60,6 @@ const HomePage: React.FC = () => {
       <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#071521]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {Date.now() < Date.parse('2026-12-19T00:00:00-06:00') && (
-            <aside aria-labelledby="january-planning-title" className="relative z-20 mb-8 rounded-2xl border-l-4 border-[#c9a55c] bg-[#fffdf8] px-5 py-5 text-[#071521] shadow-xl sm:px-7">
-              <div>
-                <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#0b5f93]">January 2027 project planning</p>
-                <h2 id="january-planning-title" className="text-xl font-bold tracking-tight sm:text-2xl">Spend less time chasing approvals in 2027</h2>
-                <p className="mt-1 text-sm leading-relaxed text-slate-700">Use SharePoint and Power Automate to simplify approvals, onboarding, and everyday work.</p>
-              </div>
-            </aside>
-          )}
           <div className="max-w-3xl lg:max-w-2xl relative">
             <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#c9a55c]/35 bg-white/[0.07] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ead6a7] backdrop-blur-md sm:text-xs">
@@ -167,6 +158,19 @@ const HomePage: React.FC = () => {
               We engineer high-performance digital environments designed to maximize efficiency and streamline team collaboration.
             </p>
           </div>
+
+          {Date.now() < Date.parse('2026-12-19T00:00:00-06:00') && (
+            <aside aria-labelledby="year-end-review-title" className="relative z-10 mb-10 flex flex-col gap-5 rounded-2xl border border-[#dac89c] border-l-4 border-l-[#c9a55c] bg-[#fffdf8] px-6 py-6 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p className="mb-1 text-xs font-bold uppercase tracking-wider text-[#0b5f93]">Paid Year-End Microsoft 365 Review</p>
+                <h3 id="year-end-review-title" className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Start January with a clear Microsoft 365 plan</h3>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-700">Have a SharePoint site that’s hard to navigate or a manual process that slows your team down? We’ll assess one site or workflow and give you a short action plan with the three improvements to tackle first.</p>
+              </div>
+              <Link to="/contact?inquiry=year-end-review" className="self-start rounded-full bg-[#0b5f93] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#084a75] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0b5f93] lg:shrink-0 lg:self-center">
+                Request a Year-End Review
+              </Link>
+            </aside>
+          )}
 
           {/* GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
