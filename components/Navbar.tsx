@@ -28,9 +28,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-[#dac89c]/55 bg-[#fffdf8]/90 py-3 shadow-[0_12px_40px_rgba(7,21,33,0.10)] backdrop-blur-xl">
       {showYearEndReview && (
-        <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="-mt-3 mb-3 block bg-[#073a53] px-4 py-2 text-center text-sm font-semibold leading-5 text-white hover:bg-[#084a69] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
-          Planning a January SharePoint or Microsoft 365 project? <span className="text-[#ead6a7]">Book a free 15-minute call</span> <span aria-hidden="true" className="ml-1 text-[#ead6a7]">→</span>
-        </a>
+        <Link to="/contact" className="-mt-3 mb-3 block bg-[#073a53] px-4 py-2 text-center text-sm font-semibold leading-5 text-white hover:bg-[#084a69] focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white">
+          Need help with SharePoint or Microsoft 365 before year-end? <span className="text-[#ead6a7]">Tell me about your project</span> <span aria-hidden="true" className="ml-1 text-[#ead6a7]">→</span>
+        </Link>
       )}
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" aria-label="NexaPlex Web Hub home" className="group flex flex-col items-start">
