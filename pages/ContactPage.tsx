@@ -23,7 +23,9 @@ const PACKAGE_MAP: Record<string, { name: string; service: string }> = {
 
 const ContactPage: React.FC = () => {
   const location = useLocation();
-  const packageId = new URLSearchParams(location.search).get('package');
+  const query = new URLSearchParams(location.search);
+  const packageId = query.get('package');
+  const isYearEndReview = query.get('inquiry') === 'year-end-review';
   const selectedPackage = packageId ? PACKAGE_MAP[packageId] : null;
 
   const [formData, setFormData] = useState({
@@ -35,13 +37,15 @@ const ContactPage: React.FC = () => {
   });
 
   useEffect(() => {
-    if (selectedPackage) {
+    if (isYearEndReview) {
+      setFormData((previous) => ({ ...previous, service: 'year-end-review' }));
+    } else if (selectedPackage) {
       setFormData((previous) => ({
         ...previous,
         service: selectedPackage.service,
       }));
     }
-  }, [selectedPackage]);
+  }, [selectedPackage, isYearEndReview]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,7 +60,9 @@ const ContactPage: React.FC = () => {
         body: JSON.stringify({
           ...formData,
           selectedPackage: selectedPackage?.name || 'Not specified',
-          _subject: selectedPackage
+          _subject: formData.service === 'year-end-review'
+            ? 'Year-End Microsoft 365 Review Inquiry'
+            : selectedPackage
             ? `Package Inquiry - ${selectedPackage.name}`
             : "New Project Inquiry - NexaPlex",
           _template: "table",
@@ -304,6 +310,7 @@ Select your primary project initiative
 <option value="teams-collaboration">Teams & Collaboration Architecture</option>
 <option value="migration">Migration (On-Prem / Legacy to M365)</option>
 <option value="copilot-automation">M365 & Copilot Automation</option>
+{isYearEndReview && <option value="year-end-review">Year-End Microsoft 365 Review (Paid)</option>}
 <option value="audit-strategy">Audit & Strategy (Not Sure / Need Guidance)</option>
 <option value="other">Other (Custom Project)</option>
                     </select>
