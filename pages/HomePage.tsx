@@ -60,6 +60,17 @@ const HomePage: React.FC = () => {
       <section className="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden bg-[#071521]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {Date.now() < Date.parse('2026-12-19T00:00:00-06:00') && (
+            <aside aria-label="January project planning" className="mb-8 flex flex-col items-start gap-4 rounded-xl border border-[#c9a55c]/40 bg-[#102638] px-5 py-4 text-white sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="font-bold text-[#ead6a7]">Planning a SharePoint or Microsoft 365 project for January?</p>
+                <p className="mt-1 text-sm text-slate-200">Use a free 15-minute call to discuss your intranet, onboarding, or approval workflow and identify a first step.</p>
+              </div>
+              <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="shrink-0 rounded-full bg-[#ead6a7] px-5 py-2.5 text-sm font-bold text-[#071521] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                Book an Intro Call
+              </a>
+            </aside>
+          )}
           <div className="max-w-3xl lg:max-w-2xl relative">
             <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-[#c9a55c]/35 bg-white/[0.07] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ead6a7] backdrop-blur-md sm:text-xs">
