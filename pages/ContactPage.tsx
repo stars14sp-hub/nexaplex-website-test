@@ -105,7 +105,7 @@ const ContactPage: React.FC = () => {
                 Send a Project Inquiry
               </a>
             </div>
-            <p className="mb-8 text-sm font-medium text-slate-600">Shital Parikh, Founder &amp; Lead Consultant</p>
+            <p className="mb-8 text-sm font-medium text-slate-600">Shital Parikh, Founder &amp; Lead Microsoft 365 Consultant</p>
             
             <div className="space-y-6">
               {/* Standard Email Contact */}
