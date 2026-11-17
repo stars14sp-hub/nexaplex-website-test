@@ -88,6 +88,21 @@ const ContactPage: React.FC = () => {
         <AmbientWave variant="contact" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {Date.now() < Date.parse('2027-01-01T00:00:00-06:00') && (
+          <section aria-labelledby="year-end-review-title" className="relative mb-12 rounded-3xl border border-[#c9a55c]/50 bg-[#071521] px-6 py-8 text-white shadow-lg sm:px-9 lg:flex lg:items-center lg:justify-between lg:gap-10">
+            <div className="max-w-2xl">
+              <p className="mb-3 text-sm font-bold tracking-wide text-[#ead6a7]">Year-End Microsoft 365 Review</p>
+              <h2 id="year-end-review-title" className="mb-4 text-3xl font-bold leading-tight sm:text-4xl">Start January knowing what to fix first.</h2>
+              <p className="mb-4 leading-relaxed text-slate-200">Approvals stuck in email? Documents hard to find? Get a focused review of one SharePoint site or workflow and a short action plan with three prioritized improvements.</p>
+              <p className="text-sm leading-relaxed text-slate-300">The review is a paid service. Start with a free 15-minute call to discuss your goals. We’ll agree on the review’s scope and fee before work begins.</p>
+            </div>
+            <div className="mt-6 lg:mt-0 lg:shrink-0">
+              <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#ead6a7] px-6 py-3 text-center text-sm font-bold text-[#071521] hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">Book a Free 15-Minute Call</a>
+              <p className="mt-3 text-sm text-slate-300">Book by December 31, 2026.</p>
+            </div>
+          </section>
+        )}
+
         {/* Main Content Row */}
         <div className="flex flex-col lg:flex-row gap-12 mb-14">
           <div className="flex-1">
@@ -162,14 +177,7 @@ const ContactPage: React.FC = () => {
         Schedule a complimentary 15-minute call to discuss your SharePoint, Microsoft 365, intranet, workflow automation, Copilot, document management, or operational efficiency goals. We'll identify the best next step.
       </p>
 
-      {Date.now() < Date.parse('2027-01-01T00:00:00-06:00') && (
-        <div className="mb-6 border-t border-slate-200 pt-4">
-          <h4 className="mb-2 text-base font-bold text-slate-900">Year-End Microsoft 365 Review</h4>
-          <p className="text-sm leading-relaxed text-slate-600">
-            Start January with a clear Microsoft 365 plan. Use the free 15-minute call to discuss one SharePoint or workflow challenge. If a closer assessment would help, we’ll agree on the scope and fee for a paid review, including a short action plan with three priorities. Book your introductory call by December 31, 2026.
-          </p>
-        </div>
-      )}
+      
 
       <a
         href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile"
