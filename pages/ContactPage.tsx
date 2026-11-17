@@ -162,7 +162,7 @@ const ContactPage: React.FC = () => {
   </h4>
 
   <div className="flex items-center space-x-1.5 px-2.5 py-1 bg-purple-50 rounded-full border border-purple-100">
-    <span className="w-1.5 h-1.5 bg-[#c850c0] rounded-full animate-pulse"></span>
+    <span className="w-1.5 h-1.5 bg-[#c850c0] rounded-full motion-safe:animate-[pulse_3s_ease-in-out_infinite] motion-reduce:animate-none"></span>
     <span className="text-[8px] font-black text-[#7c3aed] uppercase tracking-wider">
       No Obligation
     </span>
@@ -374,7 +374,7 @@ Select your primary project initiative
                     <div className="flex items-center justify-center sm:justify-start space-x-2 mb-2">
                       <h4 className="font-black text-slate-900 uppercase tracking-widest text-[10px]">30-Minute Strategy Audit</h4>
                       <div className="flex items-center space-x-1 px-2 py-0.5 bg-blue-50 rounded-full border border-blue-100">
-                        <span className="w-1.5 h-1.5 bg-[#4f5fb0] rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-[#4f5fb0] rounded-full motion-safe:animate-[pulse_3s_ease-in-out_infinite] motion-reduce:animate-none"></span>
                         <span className="text-[8px] font-black text-[#4f5fb0] uppercase tracking-tighter">Architect Review</span>
                       </div>
                     </div>
