@@ -97,6 +97,14 @@ const ContactPage: React.FC = () => {
             <p className="mb-6 text-xl font-medium leading-relaxed text-slate-600">
               Whether you’re planning a SharePoint intranet or simplifying onboarding or approvals, tell me what you’d like to improve. You’ll hear directly from me.
             </p>
+            {Date.now() < Date.parse('2027-01-01T00:00:00-06:00') && (
+              <section aria-labelledby="year-end-review-heading" className="mb-6 rounded-2xl border border-[#dac89c] bg-[#fffdf8] p-5">
+                <p className="mb-2 text-xs font-bold uppercase tracking-wider text-[#0b5f93]">Year-End Microsoft 365 Review</p>
+                <h2 id="year-end-review-heading" className="mb-2 text-xl font-bold text-slate-900">Start January with a clear Microsoft 365 plan</h2>
+                <p className="text-sm leading-relaxed text-slate-700">Book a free 15-minute introductory call to discuss one SharePoint or workflow challenge. If a closer assessment would help, we’ll agree on the scope and fee for a paid review, including a short action plan with three priorities.</p>
+                <p className="mt-2 text-sm text-slate-700">Book your introductory call by December 31, 2026.</p>
+              </section>
+            )}
             <div className="mb-10 flex flex-wrap gap-3">
               <a href="https://outlook.office.com/bookwithme/user/476d6b0ef7b1437393a63c08dd37e97f@nexaplexwebhub.com/meetingtype/gvU-45cccEux3i7eDDbA_g2?anonymous&amp;ismsaljsauthenabled&amp;ep=mLinkFromTile" target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#0b5f93] px-5 py-3 text-center text-sm font-bold text-white hover:bg-[#084a75]">
                 Book a Free 15-Minute Call
@@ -105,7 +113,7 @@ const ContactPage: React.FC = () => {
                 Send a Project Inquiry
               </a>
             </div>
-            <p className="mb-8 text-sm font-medium text-slate-600">Shital Parikh, Founder &amp; Lead Microsoft 365 Consultant</p>
+            <p className="mb-8 text-sm font-medium text-slate-600">Shital Parikh, Founder &amp; Lead Consultant</p>
             
             <div className="space-y-6">
               {/* Standard Email Contact */}
