@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
   return (
     <div className="overflow-hidden">
       {/* Hero Section */}
-      <section className={`relative pb-16 lg:pb-32 overflow-hidden bg-[#071521] ${Date.now() < Date.parse('2026-12-19T00:00:00-06:00') ? 'pt-44 lg:pt-56' : 'pt-32 lg:pt-48'}`}>
+      <section className={`relative pb-16 lg:pb-32 overflow-hidden bg-[#071521] ${Date.now() < Date.parse('2027-01-01T00:00:00-06:00') ? 'pt-44 lg:pt-56' : 'pt-32 lg:pt-48'}`}>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_36%,rgba(201,165,92,0.25),transparent_24%),radial-gradient(circle_at_62%_70%,rgba(31,92,137,0.25),transparent_34%)]"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl lg:max-w-2xl relative">
